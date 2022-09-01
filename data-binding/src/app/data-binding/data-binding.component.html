@@ -51,7 +51,7 @@
             </div>
         </div>
     </article> -->
-    <article>
+    <!-- <article>
         <h3>Event binding</h3>
 
         <div>
@@ -76,5 +76,41 @@
                 Passe o mouse sobre mim
             </span>
         </div>
+    </article> -->
+    <!-- <article>
+        <h3>Two-way data binding</h3>
+        <div>
+            <input #nomeInput type="text"
+                [value]="nome"
+                (input)="nome=nomeInput.value"
+            />
+            <input type="text"
+                [ngModel]="nome"
+                (ngModelChange)="nome=$event"
+            />
+            <input type="text"
+                [(ngModel)]="nome"
+            />
+            <p>
+                Você digitou: {{ nome }}
+            </p>
+        </div>
+        <div>
+            <input type="text"
+                [(ngModel)]="pessoa.nome"
+            />
+            <input type="text"
+                [(ngModel)]="pessoa.idade"
+            />
+            <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} ano(s)</p>
+        </div>
+    </article> -->
+    <article>
+        <h3>Input/Output Properties</h3>
+        <curso nome="Angular 2"></curso>
+
+        <contador [valor]="valorInicial"
+            (mudouValor)="onMudouValor($event)"
+        ></contador>
     </article>
 </section>
